@@ -2,10 +2,10 @@
 
 :root {
   --primary-color: orange;
-  --second-color: #8fe9f7;
-  --third-color: #45ddf5;
-  --fourth-color: #446f75;
-  --fifth-color: #36afc2;
+  --second-color: red;
+  --third-color: blue;
+  --fourth-color: green;
+  --fifth-color: purple;
   --transition: 300ms ease-in;
   --primary-font: Comfortaa;
   --second-font: fjalla one;
