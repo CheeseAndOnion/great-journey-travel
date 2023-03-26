@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&family=Fjalla+One&family=Oooh+Baby&display=swap');
+
+:root {
+  --primary-color: #216a75;
+  --second-color: #8fe9f7;
+  --third-color: #45ddf5;
+  --fourth-color: #446f75;
+  --fifth-color: #36afc2;
+  --transition: 300ms ease-in;
+  --primary-font: Comfortaa;
+  --second-font: fjalla one;
+  --third-font: oooh baby;
+  --radius: 7px;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  box-sizing: border-box;
+  line-height: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--fourth-color);
+  padding: 13px 18px;
+  border-radius: var(--radius);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+  color: var(--second-color);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+/* 279. Hero CSS */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(39, 126, 139, 0.8), rgba(39, 126, 139, 0.8)),
+    url('./images/hero-background.jpeg') center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner {
+  text-align: center;
+  color: white;
+  max-width: 80%;
+}
+
+.hero-banner h1 {
+  text-transform: uppercase;
+  line-height: 3rem;
+  font-size: 1.9rem;
+}
+
+.hero-banner p {
+  max-width: 26rem;
+  line-height: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.hero-btn {
+  padding: 13px;
+  border: 3px solid white;
+  background: none;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+@media screen and (min-width: 700px) {
+  .hero-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+    max-width: 30rem;
+  }
+
+  .hero-btn {
+    padding: 17px;
+  }
+}
+
+/* 281. About CSS */
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1050px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95%;
+  }
+}
+
+/* 282. About Column Layout */
+.about-image,
+.about-text {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .about-center {
+    display: flex;
+    /* background: red; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  .about-image {
+    position: relative;
+  }
+
+  .about-image::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.3rem solid var(--primary-color);
+    top: -10px;
+    left: -10px;
+    box-sizing: border-box;
+  }
+
+  .about-photo {
+    position: relative;
+  }
+}
+
+/* 284. Services CSS */
+.service-title {
+  margin-bottom: 4rem;
+}
+
+.services {
+  background: rgb(234, 251, 255);
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.service-icon {
+  background: var(--primary-color);
+  color: white;
+  padding: 7px;
+  border-radius: var(--radius);
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.service-info {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .services-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    max-width: calc(50% - 1rem);
+    line-height: 1.3rem;
+  }
+
+  .service-3 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .service-3 span,
+  h3,
+  p {
+    align-self: center;
+  }
+
+  .service-3 p {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .service {
+    max-width: calc(33% - 1rem);
+  }
+
+  .service-3 p {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .service {
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .services-center {
+    max-width: 90vw;
+  }
+  .service-icon {
+    margin-top: 20px;
+  }
+
+  .service-3 {
+    flex-direction: row;
+  }
+
+  .service-3 span {
+    align-self: start;
+  }
+
+  .service-info {
+    padding-left: 15px;
+  }
+}
+
+/* 286. Tours CSS */
+.featured-card {
+  width: 80vw;
+  margin: 0 auto;
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.featured-card:hover {
+  transform: scale(1.01);
+  box-shadow: var(--dark-shadow);
+}
+
+.featured-image {
+  position: relative;
+}
+
+.traveldate {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--fifth-color);
+  color: white;
+  margin: 0;
+  border-top-left-radius: var(--radius);
+  padding: 8px;
+}
+
+.featured-image {
+  height: 220px;
+}
+
+.featured-photo {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.featured-info {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.featureddetails {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tour-btn {
+  text-align: center;
+}
+
+.tour-btn a {
+  background: var(--fifth-color);
+}
+
+@media screen and (min-width: 650px) {
+  .featured-center {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95vw;
+  }
+
+  .featured-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .featured-center {
+    max-width: 95vw;
+  }
+
+  .featured-card {
+    width: calc(33% - 1.5rem);
+  }
+}
+
+/* 289. Contact CSS */
+.contact {
+  background: var(--primary-color);
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.form-control {
+  flex: 1 1 auto;
+}
+
+.form-control,
+.submit-button {
+  border: transparent;
+  padding: 5px;
+  max-width: 20rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  border-radius: 2px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: var(--primary-color);
+}
+
+.form-control::-moz-placeholder {
+  color: var(--primary-color);
+}
+
+.form-control:-ms-input-placeholder {
+  color: var(--primary-color);
+}
+
+.form-control::-ms-input-placeholder {
+  color: var(--primary-color);
+}
+
+.form-control::placeholder {
+  color: var(--primary-color);
+}
+
+.submit-button {
+  margin-left: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-button:hover {
+  background: var(--second-color);
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 950px) {
+  .contact-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact-form {
+    align-self: center;
+    flex: 1 1 auto;
+    margin-left: 5rem;
+  }
+}
+
+/* 291. Gallery CSS */
+.gallery-img-container {
+  position: relative;
+  background: var(--primary-color);
+}
+
+.gallery-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.gallery-img {
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.gallery-img-container:hover .gallery-img {
+  opacity: 0.5;
+}
+
+.gallery-img-container:hover .gallery-icon {
+  opacity: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .gallery-center {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-img-container {
+    flex: 1 0 50%;
+    /* width: 50%; */
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .gallery-img-container {
+    flex: 1 0 25%;
+  }
+}
+
+/* 293. Footer CSS */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--fifth-color);
+  color: white;
+}
+
+.footer-links,
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+  margin: 2rem 0 3rem 0;
+  font-size: 1.2rem;
+}
+
+.footer-links li a,
+.footer-icons li a {
+  color: white;
+}
+
+.footer-icons li a {
+  font-size: 2rem;
+}
+
+.footer-links li a:hover,
+.footer-icons li a:hover {
+  color: var(--third-color);
+}
+
+.footer-links li:hover {
+  transform: scale(1.05);
+}
+
+.footer-icons li:hover {
+  transform: scale(1.3);
+}
+
+.copyright {
+  margin-top: 3rem;
+}
+
+/* 295. Navbar CSS - Small Screen */
+/* img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: var(--dark-shadow);
+  z-index: 3;
+}
+
+.nav-header {
+  height: 100px;
+}
+
+.nav-logo {
+  height: 90%;
+}
+
+.nav-icons {
+  display: none;
+}
+
+.nav-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.nav-toggle {
+  background: transparent;
+  border: none;
+  color: green;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  scale: 1.2;
+}
+
+.nav-links {
+  display: inline;
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 1.5rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background: var(--fourth-color);
+  color: white;
+  padding-left: 1.6rem;
+} */
+
+/* 296. Navbar Toggle */
+/* .nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-links {
+  height: 250px;
+} */
+
+/* 296. Redo HTML and CSS for 294 but don't delete anything */
+.navbar {
+  background: white;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul li a {
+  color: var(--primary-color);
+}
+
+.checkbox:checked ~ nav {
+  opacity: 1;
+}
+
+.checkbox {
+  display: none;
+}
+
+.nav-icons {
+  display: none;
+}
+
+.nav-header {
+  height: 100px;
+  display: flex;
+}
+
+.nav-logo {
+  height: 90%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  align-self: center;
+  padding-left: 1rem;
+  /* opacity: 1; */
+}
+
+.checkbox-style {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-links1 {
+  margin: 0;
+  background: white;
+  transform-origin: top;
+  transform: scale(1, 0);
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkbox:checked ~ nav .nav-links1 {
+  visibility: visible;
+  transform-origin: top;
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.nav-link1 {
+  display: block;
+  padding: 1rem;
+  color: var(--fourth-color);
+  font-weight: bold;
+  opacity: 0;
+  transition: 50ms ease-out;
+}
+
+.checkbox:checked ~ nav .nav-link1 {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.nav-links1 li {
+  transition: var(--transition);
+}
+
+.nav-links1 li:hover {
+  background: var(--fourth-color);
+}
+
+.nav-links1 li a:hover {
+  color: white;
+  transform: scale(1.1);
+  margin-left: 1.7rem;
+}
+
+.nav-links2 {
+  display: none;
+}
+
+/* 298. Navbar CSS - Big Screen */
+@media screen and (min-width: 900px) {
+  .nav-link1,
+  .nav-links1 {
+    display: none;
+  }
+
+  .checkbox-style {
+    display: none;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-icons {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 0 2rem;
+    color: var(--primary-color);
+    padding-right: 1rem;
+  }
+
+  .nav-icons a {
+    color: var(--primary-color);
+  }
+
+  .nav-links2 {
+    display: flex;
+    font-weight: bold;
+    gap: 0 2rem;
+    transition: var(--transition);
+  }
+
+  .nav-links2 li {
+    transition: var(--transition);
+    color: red;
+  }
+
+  .nav-links2 li:hover {
+    background: var(--fourth-color);
+    border-radius: 5px;
+  }
+
+  .nav-links2 li a:hover {
+    color: white;
+  }
+
+  .nav-links2 a {
+    /* color: var(--fourth-color); */
+    padding: 0.5rem 0.5rem;
+    display: inline-block;
+  }
+}
